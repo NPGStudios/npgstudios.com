@@ -125,19 +125,10 @@ footer.site .legal { grid-column: 1 / -1; border-top: 1px solid rgb(255 255 255 
 
 .hero-npg {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   background: var(--night);
   color: #e9eafc;
-  --cx: 74%;
-  --cy: 50%;
-}
-.hero-npg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-conic-gradient(from -2deg at var(--cx) var(--cy), rgb(234 172 55 / 0.16) 0deg 2.4deg, transparent 2.4deg 11.25deg);
-  -webkit-mask-image: radial-gradient(circle at var(--cx) var(--cy), #000 0, #000 18%, transparent 62%);
-  mask-image: radial-gradient(circle at var(--cx) var(--cy), #000 0, #000 18%, transparent 62%);
 }
 .hero-npg .wrap {
   position: relative;
@@ -150,11 +141,27 @@ footer.site .legal { grid-column: 1 / -1; border-top: 1px solid rgb(255 255 255 
 }
 .hero-npg h1 { color: #ffffff; }
 .hero-npg .lede { margin-top: 1.2rem; font-size: 1.2rem; color: #c9cbef; max-width: 34rem; }
-.hero-npg .mark { justify-self: center; width: min(100%, 25rem); filter: drop-shadow(0 0 40px rgb(225 105 21 / 0.35)); }
+/* The rays behind the phoenix start from the centre of its own starburst
+   (45.5% across, 49.7% down the mark), so they line up at any screen width. */
+.hero-npg .burst { position: relative; justify-self: center; width: min(100%, 25rem); }
+.hero-npg .burst::before {
+  content: '';
+  position: absolute;
+  left: 45.5%;
+  top: 49.7%;
+  width: 3400px;
+  height: 3400px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  background: repeating-conic-gradient(from -1.2deg, rgb(234 172 55 / 0.16) 0deg 2.4deg, transparent 2.4deg 11.25deg);
+  -webkit-mask-image: radial-gradient(circle, #000 0, #000 5%, transparent 34%);
+  mask-image: radial-gradient(circle, #000 0, #000 5%, transparent 34%);
+}
+.hero-npg .mark { display: block; width: 100%; filter: drop-shadow(0 0 40px rgb(225 105 21 / 0.35)); }
 @media (max-width: 760px) {
-  .hero-npg { --cx: 50%; --cy: 28%; }
   .hero-npg .wrap { grid-template-columns: 1fr; padding-top: 2.5rem; padding-bottom: 3rem; }
-  .hero-npg .mark { order: -1; width: min(70%, 16rem); }
+  .hero-npg .burst { order: -1; width: min(70%, 16rem); }
 }
 
 /* ---------- sections ---------- */
