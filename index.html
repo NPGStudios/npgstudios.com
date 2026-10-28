@@ -3,37 +3,102 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NPG LLC</title>
-<meta name="description" content="NPG LLC makes small, privacy-respecting browser software.">
-<link rel="stylesheet" href="site.css">
+<title>NPG Studios</title>
+<meta name="description" content="NPG Studios makes browser extensions and small apps. The first, Stowaway, saves and restores your browser tabs.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="./">NPG LLC</a>
-    <nav><a href="mailto:dev@npgstudios.com">Contact</a></nav>
+    <a class="logo" href="/" aria-label="NPG Studios home">
+      <picture>
+        <source srcset="/assets/npg-studios-logo-reversed.svg" media="(prefers-color-scheme: dark)">
+        <img src="/assets/npg-studios-logo.svg" alt="NPG Studios" width="188" height="64">
+      </picture>
+    </a>
+    <nav aria-label="Main"><a href="#products">Products</a><a href="#contact">Contact</a></nav>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <h1>NPG LLC</h1>
-    <p class="lede">Small, careful software that keeps your data on your own devices.</p>
+<main>
+  <section class="hero-npg">
+    <div class="wrap">
+      <div>
+        <h1>Useful software, made with care.</h1>
+        <p class="lede">NPG Studios makes web apps and browser extensions: Ignis Tools for tax-aware retirement planning, and Stowaway for keeping your browser tabs.</p>
+      </div>
+      <img class="mark" src="/assets/npg-studios-mark.svg" alt="" width="400" height="371">
+    </div>
   </section>
 
-  <h2>Products</h2>
-  <div class="grid">
-    <a class="card" href="stowaway/" style="text-decoration: none; color: inherit">
-      <h3>Stowaway</h3>
-      <p>Save and restore your browser tabs, with automatic snapshots and backup files on your own disk. For Chrome and Edge.</p>
-    </a>
-  </div>
+  <section class="section" id="products">
+    <div class="wrap">
+      <h2>Products</h2>
+      <ul class="products">
+        <li class="product p-ignis">
+          <a class="media" href="https://ignistools.com" tabindex="-1" aria-hidden="true"><img src="/assets/products/ignis-tools-card.webp" alt="" width="1200" height="630"></a>
+          <div class="info">
+            <h3>Ignis Tools</h3>
+            <p>Tax-aware retirement planning software. Nine connected tools share one profile, so what you enter in one carries into the others.</p>
+            <ul class="tools">
+              <li><img src="/assets/products/ignis/vector.webp" alt="" width="40" height="40"><span><strong>Vector</strong>Retirement income simulator</span></li>
+              <li><img src="/assets/products/ignis/limen.webp" alt="" width="40" height="40"><span><strong>Limen</strong>Tax bracket visualizer</span></li>
+              <li><img src="/assets/products/ignis/hora.webp" alt="" width="40" height="40"><span><strong>Hora</strong>Social Security claiming</span></li>
+              <li><img src="/assets/products/ignis/scala.webp" alt="" width="40" height="40"><span><strong>Scala</strong>Roth conversion planner</span></li>
+              <li><img src="/assets/products/ignis/tempus.webp" alt="" width="40" height="40"><span><strong>Tempus</strong>Required minimum distributions</span></li>
+              <li><img src="/assets/products/ignis/ordo.webp" alt="" width="40" height="40"><span><strong>Ordo</strong>Withdrawal order across accounts</span></li>
+              <li><img src="/assets/products/ignis/locus.webp" alt="" width="40" height="40"><span><strong>Locus</strong>Asset location by account type</span></li>
+              <li><img src="/assets/products/ignis/nexus.webp" alt="" width="40" height="40"><span><strong>Nexus</strong>ACA health coverage subsidies</span></li>
+              <li><img src="/assets/products/ignis/heres.webp" alt="" width="40" height="40"><span><strong>Heres</strong>Estate and heir taxes</span></li>
+            </ul>
+            <p class="badges"><span class="status">Free in your browser</span><span class="status soon">Pro coming soon</span></p>
+            <p class="disclaimer"><strong>Educational tools, not financial advice.</strong> Ignis Tools provides educational and informational tools only, not financial, investment, tax or legal advice. All projections are hypothetical estimates.</p>
+            <a class="go" href="https://ignistools.com">Visit ignistools.com</a>
+          </div>
+        </li>
+        <li class="product p-stowaway">
+          <a class="media" href="/stowaway/" tabindex="-1" aria-hidden="true"><img src="/assets/products/stowaway-card.webp" alt="" width="1200" height="630"></a>
+          <div class="info">
+            <h3>Stowaway</h3>
+            <p>A browser extension that saves your open tabs and tab groups so you can close them and bring them back later, with automatic snapshots and optional backup files on your own disk.</p>
+            <p class="badges"><span class="status">Coming soon to Chrome and Edge</span></p>
+            <a class="go" href="/stowaway/">About Stowaway</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div>
+          <h3>Help with a product</h3>
+          <p><a href="mailto:support@npgstudios.com">support@npgstudios.com</a></p>
+        </div>
+        <div>
+          <h3>Everything else</h3>
+          <p><a href="mailto:dev@npgstudios.com">dev@npgstudios.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 NPG LLC, Oklahoma</span>
-    <a href="mailto:dev@npgstudios.com">dev@npgstudios.com</a>
+    <img src="/assets/npg-studios-logo-reversed.svg" alt="NPG Studios" width="164" height="56">
+    <div class="cols">
+      <div><h3>Products</h3><ul><li><a href="https://ignistools.com">Ignis Tools</a></li><li><a href="/stowaway/">Stowaway</a></li></ul></div>
+      <div><h3>Stowaway</h3><ul><li><a href="/stowaway/terms.html">Terms of Use</a></li><li><a href="/stowaway/privacy.html">Privacy Policy</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li><a href="mailto:support@npgstudios.com">support@npgstudios.com</a></li><li><a href="mailto:dev@npgstudios.com">dev@npgstudios.com</a></li></ul></div>
+    </div>
+    <p class="legal">© 2026 NPG LLC, Oklahoma. NPG Studios is a brand of NPG LLC.</p>
   </div>
 </footer>
 </body>

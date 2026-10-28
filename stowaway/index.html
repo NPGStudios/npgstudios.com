@@ -5,70 +5,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stowaway: save and restore your browser tabs</title>
 <meta name="description" content="Stowaway saves your open tabs and tab groups, takes automatic snapshots, and can keep backup files on your own disk. No account, no tracking.">
-<link rel="icon" href="icon.png">
-<link rel="stylesheet" href="../site.css">
+<link rel="icon" href="/stowaway/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
 </head>
-<body>
+<body class="p-stowaway">
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="../">NPG LLC</a>
-    <nav><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="mailto:support@npgstudios.com">Support</a></nav>
+    <a class="logo" href="/" aria-label="NPG Studios home">
+      <picture>
+        <source srcset="/assets/npg-studios-logo-reversed.svg" media="(prefers-color-scheme: dark)">
+        <img src="/assets/npg-studios-logo.svg" alt="NPG Studios" width="188" height="64">
+      </picture>
+    </a>
+    <nav aria-label="Main"><a href="/#products">Products</a><a href="#support">Support</a></nav>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <div class="title">
-      <img src="icon.png" alt="" width="64" height="64">
-      <h1>Stowaway</h1>
+<main>
+  <section class="hero-product">
+    <div class="wrap">
+      <div>
+        <p class="name"><img src="/stowaway/icon.svg" alt="" width="56" height="56">Stowaway</p>
+        <h1>Put your tabs away for later.</h1>
+        <p class="lede">Stowaway saves your open tabs and tab groups so you can close them and bring them back later. It also keeps automatic snapshots to go back to after a crash or a stray click.</p>
+        <span class="status">Coming soon to Chrome and Edge</span>
+      </div>
+      <img class="shot" src="/stowaway/img/popup.webp" alt="The Stowaway toolbar popup: save all windows or this window, search saved tabs, and restore a session" width="420" height="560">
     </div>
-    <p class="lede">A tab and session saver for Chrome and Edge. It takes automatic snapshots of your tabs and, once you turn them on, keeps backup files on your own disk.</p>
-    <p class="get">Coming soon to the Chrome Web Store and Microsoft Edge Add-ons.</p>
   </section>
 
-  <h2>What it does</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Automatic snapshots</h3>
-      <p>Every 15 minutes and shortly after your tabs change, Stowaway keeps a snapshot, so there's a recent copy to go back to after a crash or a stray click.</p>
-    </div>
-    <div class="card">
-      <h3>Backup files on your disk</h3>
-      <p>Turn on backup files and Stowaway saves copies to Downloads/Stowaway, outside the browser, so a browser reset or reinstall leaves them in place.</p>
-    </div>
-    <div class="card">
-      <h3>Sessions with history</h3>
-      <p>Save all windows or one. Each change to a session keeps the earlier version, so you can step back.</p>
-    </div>
-    <div class="card">
-      <h3>Restores what you had</h3>
-      <p>Windows, pinned tabs and tab groups with their names and colors come back in new windows, leaving what's open alone.</p>
-    </div>
-    <div class="card">
-      <h3>Search and tidy</h3>
-      <p>Search every saved tab, spot duplicates and remove them in one step, and list sites that snapshots should skip.</p>
-    </div>
-    <div class="card">
-      <h3>Bring your tabs over</h3>
-      <p>Imports exports from OneTab, Session Buddy and Tab Session Manager, and exports to several formats of its own.</p>
-    </div>
-  </div>
+  <section class="section">
+    <div class="wrap">
+      <h2>What it does</h2>
 
-  <h2>Your data stays with you</h2>
-  <p>Stowaway keeps what it saves in your browser and, if you turn them on, in backup files on your computer. It has no account, no analytics, no ads and no tracking, and NPG runs no servers that receive your tabs. It reads the address and title of your open tabs to save them, and nothing from inside the pages. The <a href="privacy.html">Privacy Policy</a> has the details.</p>
+      <div class="feature">
+        <div class="text">
+          <h3>Sessions you can go back to</h3>
+          <p>Save all windows, one window, selected tabs or a single tab, with tab groups (names and colors), pinned tabs and window positions. Saving a session again keeps the earlier version, so you can step back.</p>
+        </div>
+        <figure><img src="/stowaway/img/sessions.webp" alt="Saved sessions in the Stowaway manager, one opened to show its tab groups" width="1280" height="660" loading="lazy"></figure>
+      </div>
 
-  <h2 id="support">Support</h2>
-  <p>Questions or problems: <a href="mailto:support@npgstudios.com">support@npgstudios.com</a>. Please don't send backup files or exports; we don't need them to help.</p>
+      <div class="feature">
+        <div class="text">
+          <h3>Snapshots on their own</h3>
+          <p>Every 15 minutes and shortly after your tabs change, Stowaway keeps a snapshot. All are kept for 48 hours, then one per hour for 7 days and one per day for 90 days. After a crash, it offers to reopen your last session.</p>
+        </div>
+        <figure><img src="/stowaway/img/snapshots.webp" alt="The list of automatic snapshots, each with Save as session and Restore buttons" width="1280" height="510" loading="lazy"></figure>
+      </div>
 
-  <p class="note">Stowaway isn't affiliated with OneTab, Session Buddy or Tab Session Manager. Chrome is a trademark of Google LLC; Microsoft Edge is a trademark of Microsoft Corporation.</p>
+      <div class="feature">
+        <div class="text">
+          <h3>Backup files on your own disk</h3>
+          <p>Turn on backup files and Stowaway saves copies of everything to Downloads/Stowaway, outside the browser, and reads each one back to check it after it's written. A browser reset or reinstall leaves them in place.</p>
+        </div>
+        <figure><img src="/stowaway/img/backups.webp" alt="Backup file settings in Stowaway" width="1280" height="646" loading="lazy"></figure>
+      </div>
+
+      <div class="feature">
+        <div class="text">
+          <h3>Find any tab you saved</h3>
+          <p>Search every saved tab, find and remove duplicate tabs in one step, with undo, and list sites that snapshots should skip, such as your bank or email.</p>
+        </div>
+        <figure><img src="/stowaway/img/search.webp" alt="Searching every saved tab in Stowaway" width="1280" height="390" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Also included</h2>
+      <ul class="also">
+        <li><strong>Restores without disturbing you.</strong> Sessions open in new windows and leave what you have open alone. Big sessions load their tabs as you click them.</li>
+        <li><strong>Bring your tabs over.</strong> Imports exports from OneTab, Session Buddy and Tab Session Manager, or a plain list of addresses.</li>
+        <li><strong>Take them anywhere.</strong> Exports as a Stowaway backup (JSON), CSV, bookmarks (HTML), Markdown or one tab per line.</li>
+        <li><strong>Trash.</strong> Deleted sessions stay in the Trash for 30 days.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="panel">
+        <h2>Privacy</h2>
+        <p>Stowaway keeps what it saves in your browser and, if you turn them on, in backup files in your Downloads folder. It reads the address, title and icon of your open tabs, and nothing from inside the pages. The <a href="/stowaway/privacy.html">Privacy Policy</a> has the details.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="support">
+    <div class="wrap">
+      <h2>Support</h2>
+      <p class="lede">Questions or problems: <a href="mailto:support@npgstudios.com">support@npgstudios.com</a>. Please don't send backup files or exports; we don't need them to help.</p>
+      <p class="note">Stowaway isn't affiliated with OneTab, Session Buddy or Tab Session Manager. Chrome is a trademark of Google LLC; Microsoft Edge is a trademark of Microsoft Corporation.</p>
+    </div>
+  </section>
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 NPG LLC, Oklahoma</span>
-    <a href="terms.html">Terms of Use</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="mailto:dev@npgstudios.com">dev@npgstudios.com</a>
+    <img src="/assets/npg-studios-logo-reversed.svg" alt="NPG Studios" width="164" height="56">
+    <div class="cols">
+      <div><h3>Products</h3><ul><li><a href="https://ignistools.com">Ignis Tools</a></li><li><a href="/stowaway/">Stowaway</a></li></ul></div>
+      <div><h3>Stowaway</h3><ul><li><a href="/stowaway/terms.html">Terms of Use</a></li><li><a href="/stowaway/privacy.html">Privacy Policy</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li><a href="mailto:support@npgstudios.com">support@npgstudios.com</a></li><li><a href="mailto:dev@npgstudios.com">dev@npgstudios.com</a></li></ul></div>
+    </div>
+    <p class="legal">© 2026 NPG LLC, Oklahoma. NPG Studios is a brand of NPG LLC.</p>
   </div>
 </footer>
 </body>

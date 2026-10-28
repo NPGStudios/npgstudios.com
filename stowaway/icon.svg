@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Stowaway: a porthole with browser windows stowed inside. Hand-drawn from the chosen concept (P5). -->
+  <defs>
+    <clipPath id="glass"><circle cx="512" cy="512" r="280"/></clipPath>
+    <mask id="crescent">
+      <circle cx="512" cy="512" r="292" fill="#fff"/>
+      <circle cx="673" cy="771" r="522" fill="#000"/>
+    </mask>
+    <!-- One browser window: a tab on the top left, then the body. -->
+    <path id="win" d="M 26 0 H 176 Q 188 0 192 12 L 206 52 H 392 Q 412 52 412 72 V 420 H 0 V 72 Q 0 52 20 52 H 10 Q 10 0 26 0 Z"/>
+    <g id="screw">
+      <circle r="64" fill="#fff"/>
+      <circle r="33" fill="#fff" stroke="#2f6bd8" stroke-width="10"/>
+      <line x1="-17" y1="-17" x2="17" y2="17" stroke="#2f6bd8" stroke-width="11" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <rect width="1024" height="1024" rx="210" fill="#2f6bd8"/>
+  <!-- Ring and screws -->
+  <circle cx="512" cy="512" r="388" fill="#fff"/>
+  <use href="#screw" x="240" y="240"/>
+  <use href="#screw" x="784" y="240" transform="rotate(90 784 240)"/>
+  <use href="#screw" x="240" y="784" transform="rotate(90 240 784)"/>
+  <use href="#screw" x="784" y="784"/>
+  <!-- Glass -->
+  <circle cx="512" cy="512" r="292" fill="#2f6bd8"/>
+  <circle cx="512" cy="512" r="292" fill="#fff" opacity="0.32" mask="url(#crescent)"/>
+  <!-- Windows, back to front, clipped to the glass -->
+  <g clip-path="url(#glass)" stroke="#2f6bd8" stroke-width="14" stroke-linejoin="round">
+    <use href="#win" x="380" y="380" fill="#fff"/>
+    <use href="#win" x="334" y="428" fill="#fff"/>
+    <use href="#win" x="286" y="478" fill="#fff"/>
+  </g>
+  <g clip-path="url(#glass)">
+    <!-- Front window: tab and title bar -->
+    <path d="M 316 492 H 456 Q 464 492 467 500 L 478 532 H 316 Z" fill="#2f6bd8"/>
+    <rect x="300" y="548" width="384" height="22" fill="#2f6bd8"/>
+    <circle cx="346" cy="514" r="13" fill="#f5a524"/>
+    <circle cx="390" cy="514" r="13" fill="#fff"/>
+    <circle cx="434" cy="514" r="13" fill="#fff"/>
+  </g>
+</svg>
